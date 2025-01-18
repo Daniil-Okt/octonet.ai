@@ -49,7 +49,7 @@ BaseHelpers.addLoadedClass();
 window.addEventListener('load', () => {
 	setTimeout(() => {
 		AOS.init();
-	}, 1000);
+	}, 1300);
 })
 
 /** ===================================================================================
