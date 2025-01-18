@@ -1,0 +1,69 @@
+// Заголовки, общие БЄМ блоки и проче...
+html {
+    opacity: 0;
+    scroll-behavior: smooth;
+    transition: opacity 0.8s ease-in-out;
+  
+    &.loaded {
+      opacity: 1;
+    }
+  
+    &.lock {
+      overflow: hidden;
+      touch-action: none;
+    }
+  }
+
+
+.faq_answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease  0s;
+}
+.faq_item._active .faq_answer {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: all;
+}
+.glow-border {
+    animation: spin 3s linear infinite; 
+}
+
+.glow-border.button-border{
+    animation: spin 5s linear infinite; 
+}
+.slow-glow-border {
+    animation: spin 10s linear infinite; 
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-planet {
+    animation: topBotSpin 5s linear infinite;
+}
+
+@keyframes topBotSpin {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-12px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(12px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
