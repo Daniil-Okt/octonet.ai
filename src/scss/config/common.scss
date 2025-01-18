@@ -45,9 +45,13 @@ html {
         transform: rotate(360deg);
     }
 }
-
 .hero-planet {
-    animation: topBotSpin 5s linear infinite;
+    transform: translateY(50px);
+    transition: all 2s ease  1s;
+}
+.loaded .hero-planet {
+    animation: topBotSpin 5s linear infinite 3s;
+    transform: translateY(0);
 }
 
 @keyframes topBotSpin {
